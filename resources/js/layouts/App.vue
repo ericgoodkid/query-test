@@ -1,16 +1,23 @@
 <template>
   <v-app id="inspire">
-    <SideBar />
-    <v-main>
+    <v-main :class="sBackgroundColor">
       <RouterView />
     </v-main>
   </v-app>
 </template>
+
 <script>
-import SideBar from './SideBar.vue'
 export default {
-  components: {
-    SideBar
+  computed: {
+    sBackgroundColor() {
+      if (this.$route.name === 'Welcome') {
+        return 'bg-green';
+      }
+
+      return 'bg-light-blue'
+    }
   }
 }
+
 </script>
+    

@@ -1,7 +1,8 @@
 <?php
 
-use App\Http\Controllers\BarberController;
-use App\Http\Controllers\BranchController;
+use App\Http\Controllers\BingoController;
+use App\Http\Controllers\BingoCrossedOutController;
+use App\Http\Controllers\BingoDrawController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +15,6 @@ use Illuminate\Support\Facades\Route;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-Route::resource('branches', BranchController::class);
-Route::resource('barbers', BarberController::class);
+Route::resource('bingos', BingoController::class);
+Route::resource('bingos.draws', BingoDrawController::class);
+Route::resource('bingos.crossout', BingoCrossedOutController::class);
