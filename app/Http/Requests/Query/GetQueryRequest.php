@@ -15,10 +15,9 @@ class GetQueryRequest extends FormRequest
     public function rules()
     {
         return [
-            QueryConstants::QUERY_KEY => [
+            QueryConstants::AMOUNT => [
                 'required',
-                'string',
-                'active_url'
+                'numeric'
             ]
         ];
     }

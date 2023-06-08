@@ -10,8 +10,7 @@ class QueryResource extends JsonResource
     public function toArray($oRequest)
     {
         return [
-          QueryConstants::NORMAL_RESPONSE_KEY   => $this->resource[QueryConstants::NORMAL_RESPONSE_KEY],
-          QueryConstants::REVERSED_RESPONSE_KEY => $this->resource[QueryConstants::REVERSED_RESPONSE_KEY]
+          QueryConstants::WORDS   => $this->resource[QueryConstants::WORDS]
         ];
     }
 }

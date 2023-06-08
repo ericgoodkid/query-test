@@ -16,7 +16,7 @@ class QueryController extends Controller
     }
     public function index(GetQueryRequest $oRequest)
     {
-        $sQuery = $oRequest->get(QueryConstants::QUERY_KEY);
-        return new QueryResource($this->oQueryService->getQueryResponse($sQuery));
+        $sNumber = (float) $oRequest->get(QueryConstants::AMOUNT);
+        return new QueryResource($this->oQueryService->index($sNumber));
     }
 }
